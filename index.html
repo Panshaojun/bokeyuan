@@ -14,44 +14,48 @@
         box-sizing: border-box;
     }
 
-    #sidebar_categories>.catListPostCategory ul {
-        position: relative;
-        padding-left: 15px;
-    }
-
-    #sidebar_categories>.catListPostCategory ul::before {
+    #sidebar_categories>.catListPostCategory>ul ul>li:first-child:before {
         position: absolute;
-        left: 15px;
-        top: 0;
+        left: -.2em;
+        top: -1.8em;
         content: "";
         width: 0;
         height: 0;
-        border: 15px solid transparent;
+        border: 10px solid transparent;
         border-left-color: black;
     }
 
     #sidebar_categories>.catListPostCategory>ul li {
-        list-style: none;
-        overflow: hidden;
+        position: relative;
+
         display: block;
+        padding-left: 15px;
+
         line-height: 1.8em;
+        
+        background-color: red;
+
+        list-style: none;
         cursor: pointer;
     }
 
     .catListPostCategoryLi {
         height: 1.8em;
-        overflow-y: hidden;
     }
 
     .catListPostCategoryLi::before {
         position: absolute;
-        left: 15px;
+        left: -20px;
         top: 0;
-        content: "";
-        width: 0;
-        height: 0;
-        border: 15px solid transparent;
-        border-top-color: black;
+        content: "??";
+        display: block;
+
+        width: 20px;
+        height: 20px;
+        background-color: red;
+    }
+    #sidebar_categories{
+        padding-left: 200px;
     }
 </style>
 
@@ -64,52 +68,37 @@
             <ul>
                 <li data-category-list-item-visible="true" style="display: block">
                     <a href="https://www.cnblogs.com/panshaojun/category/1967702.html" rel="" target="">
-                        1$0$CSS &amp; HTML(4)
+                        11$1$CSS & HTML(4)
                     </a>
                 </li>
                 <li data-category-list-item-visible="true" style="display: block">
                     <a href="https://www.cnblogs.com/panshaojun/category/1654921.html" rel="" target="">
-                        1$1$ECMAScript(6)
+                        11$2$ECMAScript(6)
                     </a>
                 </li>
                 <li data-category-list-item-visible="true" style="display: block">
                     <a href="https://www.cnblogs.com/panshaojun/category/1964163.html" rel="" target="">
-                        2$1$JavaEE(1)
+                        12$1$React(5)
                     </a>
                 </li>
                 <li data-category-list-item-visible="true" style="display: block">
                     <a href="https://www.cnblogs.com/panshaojun/category/1802966.html" rel="" target="">
-                        1$2$React(5)
+                        12$2$Vue(3)
                     </a>
                 </li>
                 <li data-category-list-item-visible="true" style="display: block">
                     <a href="https://www.cnblogs.com/panshaojun/category/1673184.html" rel="" target="">
-                        1$3$TypeScript(4)
+                        13$1$webpack(2)
                     </a>
                 </li>
                 <li data-category-list-item-visible="true" style="display: block">
                     <a href="https://www.cnblogs.com/panshaojun/category/1924009.html" rel="" target="">
-                        1$4$Vue(3)
+                        13$3$TypeScript(4)
                     </a>
                 </li>
                 <li data-category-list-item-visible="true" style="display: block">
                     <a href="https://www.cnblogs.com/panshaojun/category/1945336.html" rel="" target="">
-                        1$5$webpack(2)
-                    </a>
-                </li>
-                <li data-category-list-item-visible="true" style="display: block">
-                    <a href="https://www.cnblogs.com/panshaojun/category/1904166.html" rel="" target="">
-                        1$6$web开发(10)
-                    </a>
-                </li>
-                <li data-category-list-item-visible="true" style="display: block">
-                    <a href="https://www.cnblogs.com/panshaojun/category/1971440.html" rel="" target="">
-                        2$0$算法(3)
-                    </a>
-                </li>
-                <li data-category-list-item-visible="true" style="display: block">
-                    <a href="https://www.cnblogs.com/panshaojun/category/1831873.html" rel="" target="">
-                        3$0$通用开发(7)
+                        2$1$算法(3)
                     </a>
                 </li>
             </ul>
