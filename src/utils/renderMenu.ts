@@ -1,10 +1,11 @@
 import Menu from '../type/Menu';
 
 const renderMenu = (menu: Menu[]) => {
+    const catListPostCategory = globalThis.document.querySelector("#sidebar_categories>.catListPostCategory");
     const ul = globalThis.document.querySelector("#sidebar_categories>.catListPostCategory>ul");
-    if (ul) {
-        ul.innerHTML = "";
-        ul.appendChild(structureElement(menu));
+    if (catListPostCategory&&ul) {
+        catListPostCategory.removeChild(ul);
+        catListPostCategory.appendChild(structureElement(menu));
     }
 }
 const structureElement: (menu: Menu[]) => HTMLUListElement = (menu) => {
@@ -15,13 +16,14 @@ const structureElement: (menu: Menu[]) => HTMLUListElement = (menu) => {
             if (i.type === "sub") {
                 const span = globalThis.document.createElement("span");
                 span.onclick = function (e) {
-                    console.log(this);
                     (this as any).parentNode.classList.toggle("catListPostCategoryLi");
                     e.stopPropagation();
                 }
                 span.innerText = i.name;
                 li.appendChild(span);
-                li.appendChild(structureElement(i.chirld));
+                if(i.chirld.length){
+                    li.appendChild(structureElement(i.chirld));
+                }
             } else {
                 const a = globalThis.document.createElement("a");
                 a.innerText = i.name;

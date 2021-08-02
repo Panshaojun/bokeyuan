@@ -8,26 +8,53 @@
     <title>Document</title>
 </head>
 <style>
-    *{
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
-    #sidebar_categories>.catListPostCategory ul{
+
+    #sidebar_categories>.catListPostCategory ul {
+        position: relative;
         padding-left: 15px;
     }
-    #sidebar_categories>.catListPostCategory>ul li{
+
+    #sidebar_categories>.catListPostCategory ul::before {
+        position: absolute;
+        left: 15px;
+        top: 0;
+        content: "";
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-left-color: black;
+    }
+
+    #sidebar_categories>.catListPostCategory>ul li {
         list-style: none;
         overflow: hidden;
         display: block;
         line-height: 1.8em;
         cursor: pointer;
     }
-    .catListPostCategoryLi{
+
+    .catListPostCategoryLi {
         height: 1.8em;
         overflow-y: hidden;
     }
+
+    .catListPostCategoryLi::before {
+        position: absolute;
+        left: 15px;
+        top: 0;
+        content: "";
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-top-color: black;
+    }
 </style>
+
 <body>
     <div id="sidebar_categories">
         <div class="catListPostCategory">
@@ -90,4 +117,5 @@
     </div>
 </body>
 <script src="./dist/main.js"></script>
+
 </html>
