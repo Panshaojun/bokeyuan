@@ -35,7 +35,6 @@ const getMenuFromElement = (lis: NodeListOf<HTMLAnchorElement>) => {
         }
         menu.push(item);
     }
-    console.log([...menu])
     return menu;
 }
 
