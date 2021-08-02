@@ -2,6 +2,7 @@ import getMenuFromElement from './utils/getMenuFromElement';
 import parseMenu from './utils/parseMenu';
 import configMenuFactory from './utils/configMenuFactory';
 import renderMenu from './utils/renderMenu';
+import correctSign from './utils/correctSign';
 import baseMenu from './config/baseMenu';
 
 const handleLoad = () => {
@@ -17,3 +18,4 @@ const handleLoad = () => {
     }
 }
 handleLoad();
+correctSign();
