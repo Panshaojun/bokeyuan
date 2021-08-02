@@ -12,7 +12,11 @@ const handleLoad = () => {
         const menu = configMenuFactory(baseMenu);
         const lisMenu = getMenuFromElement(liElements);
         parseMenu(menu, lisMenu);
-        renderMenu(menu);
+        if(lisMenu.length){
+            console.log("检测到如下菜单未配置：",lisMenu);
+        }
+        console.log(menu);
+        // renderMenu(menu);
     } else if (maxTimes--) {
         //注意此处，博客园是异步渲染侧边栏的，未检测到数组存在时，将会递归检测
         globalThis.setTimeout(handleLoad, 500);

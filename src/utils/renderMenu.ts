@@ -12,7 +12,7 @@ const structureElement: (menu: Menu[]) => HTMLUListElement = (menu) => {
     const ul = globalThis.document.createElement("ul");
     for (let i of menu) {
         const li = globalThis.document.createElement("li");
-        if (i.type === "sub") {
+        if (i.chirld) {
             const span = globalThis.document.createElement("span");
             span.onclick = function (e) {
                 (this as any).parentNode.classList.toggle("catListPostCategoryLi");
@@ -23,11 +23,13 @@ const structureElement: (menu: Menu[]) => HTMLUListElement = (menu) => {
             if (i.chirld.length) {
                 li.appendChild(structureElement(i.chirld));
             }
-        } else {
+        } else if (i.url) {
             const a = globalThis.document.createElement("a");
             a.innerText = i.name;
             a.href = i.url;
             li.appendChild(a);
+        } else {
+            console.info(`检测到配置菜单未匹配，其名称为${i.name}`)
         }
         ul.appendChild(li);
     }
