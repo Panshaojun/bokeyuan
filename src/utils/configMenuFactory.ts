@@ -1,13 +1,9 @@
 import Menu from '../type/Menu';
 import Config from '../type/Config';
 
-const configMenuFactory: (config: Config[]) => Menu[] = (config) => config.map<Menu>((val, i) => {
+const configMenuFactory: (config: Config[]) => Menu[] = (config) => config.map(val => {
     const ans: Menu = {
-        id: val.id,
-        pid: 0,
-        order: i + 1,
         name: val.name,
-        type: "sub",
         url: "",
         chirld: []
     };
