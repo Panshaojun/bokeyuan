@@ -1,3 +1,3 @@
-type Config = { name: string, chirld: Config[] } | { name: string }
+type Config = { name: string, chirld?: Config[] }
 
 export default Config;

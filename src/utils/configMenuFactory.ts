@@ -4,8 +4,7 @@ import Config from '../type/Config';
 const configMenuFactory: (config: Config[]) => Menu[] = (config) => config.map(val => {
     const ans: Menu = {
         name: val.name,
-        url: "",
-        chirld: []
+        url: ""
     };
     if (val.chirld) {
         ans.chirld = configMenuFactory(val.chirld);

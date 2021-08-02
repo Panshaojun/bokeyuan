@@ -1,9 +1,9 @@
 import Menu from '../type/Menu';
 const parseMenu = (subMenu:Menu[],menu: Menu[]) => {
     for(let i of subMenu){
-        if(i.type==="sub"){
+        if(!i.chirld){
             for(let j=0;j<menu.length;j++){
-                if(i.id===menu[j].pid){
+                if(i.name.indexOf(menu[j].name)!==-1){
                     i.chirld.push(menu[j]);
                     menu.splice(j--,1);
                 }
