@@ -1,27 +1,43 @@
 import Config from '../type/Config';
 const baseMenu: Config[] = [
     {
-        id: 1,
         name: "web开发",
         chirld: [
             {
-                id: 11,
-                name: "基础技术"
+                name: "基础技术",
+                chirld: [
+                    {
+                        name: "CSS & HTML"
+                    },
+                    {
+                        name: "ECMAScript"
+                    }
+                ]
             },
             {
-                id: 12,
-                name: "框架"
+                name: "框架",
+                chirld: [
+                    {
+                        name: "React"
+                    },
+                    {
+                        name: "Vue"
+                    },
+                ]
             },
             {
-                id: 13,
-                name: "工程"
+                name: "工程",
+                chirld:[
+                    {
+                        name:"Webpack"
+                    },
+                    {
+                        name:"TypeScript"
+                    }
+                ]
             },
         ]
     },
-    {
-        id: 2,
-        name: "算法"
-    }
 ]
 
 export default baseMenu;

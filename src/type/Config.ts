@@ -1,6 +1,3 @@
-type Config = {
-    id: number,
-    name: string,
-    chirld?:Config[]
-}
+type Config = { name: string, chirld: Config[] } | { name: string }
+
 export default Config;
