@@ -3,7 +3,7 @@ import Menu from '../type/Menu';
 const renderMenu = (menu: Menu[]) => {
     const catListPostCategory = globalThis.document.querySelector("#sidebar_categories>.catListPostCategory");
     const ul = globalThis.document.querySelector("#sidebar_categories>.catListPostCategory>ul");
-    if (catListPostCategory&&ul) {
+    if (catListPostCategory && ul) {
         catListPostCategory.removeChild(ul);
         catListPostCategory.appendChild(structureElement(menu));
     }
@@ -21,7 +21,7 @@ const structureElement: (menu: Menu[]) => HTMLUListElement = (menu) => {
                 }
                 span.innerText = i.name;
                 li.appendChild(span);
-                if(i.chirld.length){
+                if (i.chirld.length) {
                     li.appendChild(structureElement(i.chirld));
                 }
             } else {
