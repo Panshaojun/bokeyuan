@@ -4,14 +4,14 @@ import configMenuFactory from './utils/configMenuFactory';
 import baseMenu from './config/baseMenu';
 
 const handleLoad = () => {
-    const lis: NodeListOf<HTMLAnchorElement> = globalThis.document.querySelectorAll(
-        "#sidebar_categories>.catListPostCategory>ul a");
-    if (lis.length) {
+    const liElements: NodeListOf<HTMLAnchorElement> = globalThis.document.querySelectorAll("#sidebar_categories>.catListPostCategory>ul a");
+    if (liElements.length) {
         const menu = configMenuFactory(baseMenu);
-        const lisMenu=getMenuFromElement(lis);
+        const lisMenu = getMenuFromElement(liElements);
         parseMenu(menu, lisMenu);
         console.log(menu);
     } else {
+        //注意此处，博客园是异步渲染侧边栏的，未检测到数组存在时，将会
         globalThis.setTimeout(handleLoad, 300);
     }
 }
