@@ -1,15 +1,36 @@
-# 🚀 Welcome to your new awesome project!
+# 给博客园 侧边栏随笔分类 分组
+哇，真的是对博客园侧边栏很很不爽了，只能分类而不能进行分组。
+这样要么导致分类增多，要么很多的随笔只能在同一个分类下面。
+我能忍？我不能忍呐！所以开了这么个项目对博客园侧边栏进行修改
 
-This project has been created using **webpack-cli**, you can now run
-
+# 使用
+如下进行打包：
 ```
 npm run build
 ```
 
-or
+打包后，在博客园后台设置（需要申请js权限），将代码拷到相应的位置
 
+# 注意
+## 随笔命名
+随笔分类的命名有一定的规范，以`$`符号分割：
 ```
-yarn build
+[pid]$[order]$[name]
 ```
++ pid 是代码config中的id，即父id
++ order 是权重，数值越小则排在前面
++ name 是你想命名的名字
 
-to bundle your application
+## 随笔命名例子
+比如你在 config 中有一个为：
+```
+{
+    id:1,
+    name:"web"
+}
+```
+你想在这个分组下开个 css 分类，则你的随笔分类名称必须为：
+```
+1$0$css
+```
+注意中间的数字0，这是权重，可以随便填写
