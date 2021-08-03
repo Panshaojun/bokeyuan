@@ -15,12 +15,11 @@ const structureElement: (menu: Menu[]) => HTMLUListElement = (menu) => {
         if (i.chirld) {
             const span = globalThis.document.createElement("span");
             span.onclick = function (e) {
-                (this as any).parentNode.classList.toggle("catListPostCategoryOpen");
-                (this as any).parentNode.classList.toggle("catListPostCategoryClose");
+                (this as any).classList.toggle("catListPostCategorySpanToggle");
+                (this as any).parentNode.classList.toggle("catListPostCategoryToggle");
                 e.stopPropagation();
             }
             span.innerText = i.name;
-            li.classList.add("catListPostCategoryOpen");
             li.appendChild(span);
             if (i.chirld.length) {
                 li.appendChild(structureElement(i.chirld));

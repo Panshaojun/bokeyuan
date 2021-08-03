@@ -9,6 +9,8 @@ let maxTimes = 25;
 const handleLoad = () => {
     const liElements: NodeListOf<HTMLAnchorElement> = globalThis.document.querySelectorAll("#sidebar_categories>.catListPostCategory>ul a");
     if (liElements.length) {
+        // const menu = configMenuFactory(baseMenu);
+        // 将baseMenu挂载全局，就可以在博客园中设置，而不用重新打包项目了
         const menu = configMenuFactory((globalThis as any).baseMenu);
         const lisMenu = getMenuFromElement(liElements);
         parseMenu(menu, lisMenu);

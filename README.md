@@ -11,15 +11,15 @@
 + 没有`chirld`的是博客园中你自己的分类命名，程序会自动根据名称匹配获取url，并渲染成 a 标签
 
 实际效果可以去我的博客园查看：[我的博客园](https://www.cnblogs.com/panshaojun/),以下是效果截图:
-![效果图](./doc/img/menu.png)
+![效果](./doc/img/menu.png)
 
 ## 三、使用
 如下进行打包：
 ```
 npm run build
 ```
-打包后，在博客园后台设置（需要申请js权限）界面，将项目 `dist/main.js` 中的代码以  `<script>` 标签包裹，放进任意一个可以撰写HTML的设置中，点确认即可
-![效果图](./doc/img/setting.png)
+打包后，在博客园后台设置（需要申请js权限）界面，将项目 `dist/main.js` 中的代码以  `<script>` 标签包裹，放进任意一个可以撰写HTML的设置中，然后把项目中的 `index.html` 中的 css 代码拷贝进博客园 css 设置中即可
+![设置](./doc/img/setting.png)
 
 ## 四、其他
 ### 4.1 代码逻辑

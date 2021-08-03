@@ -10,40 +10,28 @@
 <style>
     #sidebar_categories>.catListPostCategory>ul li {
         position: relative;
-
         display: block;
         padding-left: 20px;
-
         line-height: 1.8em;
-        
-        /* background-color: red; */
-
         list-style: none;
         cursor: pointer;
         overflow-y: hidden;
     }
-    .catListPostCategoryOpen::before{
+    #sidebar_categories>.catListPostCategory>ul li>span::before {
         position: absolute;
         content: "";
         left: 0px;
         top: 3px;
         height: 20px;
         width: 20px;
-        background-image: url(https://img2020.cnblogs.com/blog/1822882/202108/1822882-20210802170032646-1546056961.png);
+        background-image: url(https://img2020.cnblogs.com/blog/1822882/202108/1822882-20210803092408361-1736795940.png);
         background-size: 100% 100%;
     }
-    .catListPostCategoryClose {
+    .catListPostCategoryToggle{
         height: 1.8em;
     }
-    .catListPostCategoryClose::before{
-        position: absolute;
-        content: "";
-        left: 0px;
-        top: 3px;
-        height: 20px;
-        width: 20px;
-        background-image: url(https://img2020.cnblogs.com/blog/1822882/202108/1822882-20210802170036852-2125193532.png);
-        background-size: 100% 100%;
+    .catListPostCategorySpanToggle::before{
+        background-image: url(https://img2020.cnblogs.com/blog/1822882/202108/1822882-20210803092437369-2081562.png) !important;
     }
 </style>
 
